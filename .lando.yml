@@ -1,0 +1,4 @@
+name: lando-drupal-practice-yash
+recipe: drupal10
+config:
+  webroot: web
