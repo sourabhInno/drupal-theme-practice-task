@@ -26,9 +26,9 @@
 /web/themes/custom/hcltech/.sass-cache/*
 /web/themes/custom/hcl_amp/.sass-cache/*
 # Subtheme
-/web/themes/custom/hcltech/node_modules
-/web/themes/custom/hcltech/css
-/web/themes/custom/hcl_amp/node_modules
+/web/themes/custom/custom_theme/node_modules
+/web/themes/custom/vustom/css
+/web/themes/custom/custom_theme/node_modules
 /web/themes/custom/hcl_amp/css
 # Ignore sass cache files
 *.sass-cache
@@ -63,3 +63,4 @@ robots.txt
 update.php
 web.config
 /lando_config/
+web/themes/custom/custom_subtheme/node_modules
