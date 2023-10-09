@@ -7,6 +7,6 @@ base theme: bootstrap5
 
 libraries:
   - custom_subtheme/global-styling
-
+  - custom_subtheme/movie-page-styling
 logo: logo.svg
 screenshot: screenshot.png

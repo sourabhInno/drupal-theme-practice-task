@@ -9,7 +9,7 @@ _core:
 id: custom_subtheme_secondary_local_tasks
 theme: custom_subtheme
 region: highlighted
-weight: -2
+weight: -4
 provider: null
 plugin: local_tasks_block
 settings:

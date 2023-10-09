@@ -9,7 +9,7 @@ _core:
 id: custom_subtheme_primary_admin_actions
 theme: custom_subtheme
 region: highlighted
-weight: -5
+weight: -7
 provider: null
 plugin: local_actions_block
 settings:
