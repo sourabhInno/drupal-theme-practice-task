@@ -1,0 +1,15 @@
+uuid: 77c7b73c-a673-4edf-a0b6-b1f27ad56776
+langcode: en
+status: true
+dependencies: {  }
+name: custom_wide_300_x_300_
+label: 'custom wide (300 x 450)'
+effects:
+  188173ab-0d9c-4a1b-b9a9-ac23d32d41a7:
+    uuid: 188173ab-0d9c-4a1b-b9a9-ac23d32d41a7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 450
+      anchor: center-center

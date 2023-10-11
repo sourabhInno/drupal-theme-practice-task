@@ -1,14 +1,14 @@
 <?php
 
-function custom_subtheme_theme_suggestions_node_alter(array &$suggestions, array $variables)
-{
-  // Get current node url.
-  $node_url = $variables['elements']['#node']->toUrl()->toString();
-  // Check whether the node url is of required node or not.
-  if ($node_url === '/movies') {
-    $suggestions[] = 'node__custom_movie';
-  }
-}
+// function custom_subtheme_theme_suggestions_node_alter(array &$suggestions, array $variables)
+// {
+//   // Get current node url.
+//   $node_url = $variables['elements']['#node']->toUrl()->toString();
+//   // Check whether the node url is of required node or not.
+//   if ($node_url === '/movies') {
+//     $suggestions[] = 'node__custom_movie';
+//   }
+// }
 
 // function custom_subtheme_preprocess_block(&$variables)
 // {
@@ -21,3 +21,15 @@ function custom_subtheme_theme_suggestions_node_alter(array &$suggestions, array
 //     // $variables['image'] = $node->get('field_release_date')->value;
 //   }
 // }
+function custom_subtheme_preprocess_html(&$variables)
+{
+  // Get current node url.
+  $node_url = \Drupal::request()->getRequestUri();
+
+  // Check whether the node url is of required node or not.
+  if ($node_url === '/movies') {
+
+    // Attach the custom_theme/custom-render library to the page.
+    $variables['#attached']['library'][] = 'custom_subtheme/slick-slider-styling';
+  }
+}
