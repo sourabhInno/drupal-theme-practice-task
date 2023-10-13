@@ -31,5 +31,8 @@ function custom_subtheme_preprocess_html(&$variables)
 
     // Attach the custom_theme/custom-render library to the page.
     $variables['#attached']['library'][] = 'custom_subtheme/slick-slider-styling';
+  } elseif ($node_url === '/custom-movies') {
+
+    $variables['#attached']['library'][] = 'custom_subtheme/movie-view-styling';
   }
 }

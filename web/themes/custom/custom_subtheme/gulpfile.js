@@ -28,7 +28,7 @@ let gulp = require("gulp"),
   ]);
 const paths = {
   scss: {
-    src: "./scss/style.scss",
+    src: "./scss/**/*.scss",
     dest: "./css",
     watch: "./scss/**/*.scss",
     movie: "./scss/movie.scss",
@@ -43,7 +43,7 @@ const paths = {
 // Compile sass into CSS & auto-inject into browsers
 function styles() {
   return gulp
-    .src([paths.scss.src, paths.scss.movie])
+    .src([paths.scss.src])
     .pipe(sourcemaps.init())
     .pipe(
       sass({

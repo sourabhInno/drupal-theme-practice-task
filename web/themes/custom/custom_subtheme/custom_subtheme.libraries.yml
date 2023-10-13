@@ -30,3 +30,15 @@ slick-slider-styling:
   js:
     //cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js:
       { type: external }
+
+movie-view-styling:
+  version: 1.x
+  css:
+    theme:
+      css/movie-view.css: {}
+  js:
+    js/popup.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once

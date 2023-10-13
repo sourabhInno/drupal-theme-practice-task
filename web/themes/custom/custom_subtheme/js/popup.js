@@ -1,36 +1,27 @@
 (function ($, Drupal, once) {
-  Drupal.behaviors.moviePage = {
+  Drupal.behaviors.popup = {
     attach: function (context, settings) {
       let modalDiv = document.querySelector(".expandedContainer");
       let closeTag = document.getElementById("close-tag");
       let expandedImage = document.getElementById("expandedImage");
       let movieTitle = document.getElementById("movieTitle");
       let modalInfo = document.getElementById("modalInfo");
-
-      once("slide", ".slider", context).forEach((element) => {
-        $(".slider .view-content").slick({
-          arrows: true,
-          centerPadding: "0px",
-          dots: true,
-          slidesToShow: 1,
-          infinite: false,
-        });
-      });
-      once("popUp", ".view-display-id-block_1 ", context).forEach((element) => {
+      once("popUp", ".view-display-id-page_1", context).forEach((element) => {
         const imagesContainer = document.querySelector(
-          ".view-display-id-block_1 "
+          ".view-display-id-page_1"
         );
         let handleImageClick = (e) => {
           if (e.target.tagName === "IMG") {
-            let element = e.target.parentNode;
-            let title = element.querySelector("h1");
-            let date = element.querySelector("p");
-            let image = element.querySelector("img");
-            let body = element.querySelector("h3");
-            image = image.src;
-            title = title.textContent;
-            date = date.textContent;
-            body = body.textContent;
+            let element = $(e.target).closest("article");
+            let title = element.find(".field--name-title").text();
+            // let date = element.querySelector(".field--name-field-release-date");
+            let image = element.find(".img-fluid").attr("src");
+            console.log(image);
+            let body = element.find(".field--name-field-description p").text();
+            // image = image.src;
+            // title = title.textContent;
+            // date = date.textContent;
+
             modalDiv.style.display = "block";
             expandedImage.src = image;
             modalDiv.style.display = "block";
