@@ -1,0 +1,29 @@
+uuid: f9e185d6-2168-4d5b-a866-467976517920
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.movies_list
+  module:
+    - system
+    - views
+  theme:
+    - custom_subtheme
+id: custom_subtheme_views_block__movies_list_block_1
+theme: custom_subtheme
+region: footer
+weight: -7
+provider: null
+plugin: 'views_block:movies_list-block_1'
+settings:
+  id: 'views_block:movies_list-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /movies

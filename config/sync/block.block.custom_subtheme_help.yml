@@ -1,0 +1,27 @@
+uuid: 17dc9847-f58c-49f7-a42e-ed84f7001425
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+    - system
+  theme:
+    - custom_subtheme
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: custom_subtheme_help
+theme: custom_subtheme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /movies

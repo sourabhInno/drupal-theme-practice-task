@@ -1,0 +1,35 @@
+{%
+set classes = [
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+]
+%}
+{{ attach_library('bootstrap5/node') }}
+<article{{ attributes.addClass(classes) }}>
+
+
+
+  <div{{ content_attributes.addClass('node__content') }}>
+  <div class="expandedContainer" id="expandedContainer">
+
+  <div class="expanded" id="myExpanded">
+
+    <span class="close-tag" id="close-tag">&times;</span>
+    <div class="expanded-content">
+    <img id="expandedImage" src="" alt="Modal Image">
+    <div class="modalInfoContainer">
+    <h1 id="movieTitle"></h1>
+     <p id="modalInfo"></p>
+  </div>
+  </div>
+</div>
+</div>
+  <h2>{{ label }}</h2>
+   {{ content }}
+  </div>
+
+</article>

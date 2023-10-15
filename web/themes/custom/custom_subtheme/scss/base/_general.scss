@@ -1,0 +1,13 @@
+@use "../partial_files/importer";
+
+.region-content,
+.region-footer {
+  padding: 0 0;
+}
+footer {
+  padding: 0;
+}
+.slick-dotted.slick-slider,
+.slick-list {
+  margin: 0 !important;
+}

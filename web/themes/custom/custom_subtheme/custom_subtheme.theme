@@ -1,0 +1,38 @@
+<?php
+
+// function custom_subtheme_theme_suggestions_node_alter(array &$suggestions, array $variables)
+// {
+//   // Get current node url.
+//   $node_url = $variables['elements']['#node']->toUrl()->toString();
+//   // Check whether the node url is of required node or not.
+//   if ($node_url === '/movies') {
+//     $suggestions[] = 'node__custom_movie';
+//   }
+// }
+
+// function custom_subtheme_preprocess_block(&$variables)
+// {
+//   $url = \Drupal::request()->getRequestUri();
+
+//   if ($url === '/movies') {
+//     $node = $variables['elements']['content']['#view']->result[0]->_entity;
+//     dump($node);
+//     dump($node->Fields);
+//     // $variables['image'] = $node->get('field_release_date')->value;
+//   }
+// }
+function custom_subtheme_preprocess_html(&$variables)
+{
+  // Get current node url.
+  $node_url = \Drupal::request()->getRequestUri();
+
+  // Check whether the node url is of required node or not.
+  if ($node_url === '/movies') {
+
+    // Attach the custom_theme/custom-render library to the page.
+    $variables['#attached']['library'][] = 'custom_subtheme/slick-slider-styling';
+  } elseif ($node_url === '/custom-movies') {
+
+    $variables['#attached']['library'][] = 'custom_subtheme/movie-view-styling';
+  }
+}

@@ -1,0 +1,13 @@
+name: Custom SubTheme
+description: "This is custom bootstrap subtheme."
+type: theme
+package: Custom
+core_version_requirement: ^9 || ^10
+base theme: bootstrap5
+
+libraries:
+  - custom_subtheme/global-styling
+  - custom_subtheme/movie-page-styling
+  - custom_subtheme/movie-view-styling
+logo: logo.svg
+screenshot: screenshot.png

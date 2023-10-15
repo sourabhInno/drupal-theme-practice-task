@@ -1,0 +1,15 @@
+uuid: c92c9530-f511-4470-81e2-87eb55c415b9
+langcode: en
+status: true
+dependencies: {  }
+name: custom_wide
+label: 'custom wide (300 x 750)'
+effects:
+  c66cf37f-a840-4d17-912c-8192b285e9a8:
+    uuid: c66cf37f-a840-4d17-912c-8192b285e9a8
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 750
+      height: 300
+      anchor: center-center

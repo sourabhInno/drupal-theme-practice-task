@@ -1,0 +1,14 @@
+@use "../partial_files/importer" as *;
+
+// Reset default margin, padding, and box-sizing for all elements
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+Enable smooth scrolling for HTML elements html {
+  scroll-behavior: smooth;
+}
